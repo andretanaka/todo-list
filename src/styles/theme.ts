@@ -10,7 +10,8 @@ declare module 'styled-components' {
 }
 
 export const fontFamily = {
-  spaceGroteskLight: 'Space Grotesk Light',
+  Poppins: 'Poppins Regular',
+  'Poppins Bold': 'Poppins Bold',
 }
 
 export const themeColors = {
