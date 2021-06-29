@@ -1,26 +1,30 @@
-import { ITodo } from 'store/types'
+import { ITodo } from 'redux/types'
 import axiosInstance from './apiConfig'
 
-export const getTodo = async (id: number): Promise<ITodo> => {
+export const getTodoService = async (id: number): Promise<ITodo> => {
   const response = await axiosInstance.get(`/todos/${id}`)
   return response.data
 }
 
-export const getTodoList = async (): Promise<ITodo[]> => {
+export const getTodoListService = async (): Promise<ITodo[]> => {
   const response = await axiosInstance.get(`/todos`)
   return response.data
 }
 
-export const createTodo = async (name: string): Promise<void> => {
+export const createTodoService = async (name: string): Promise<void> => {
   const payload = { name }
   await axiosInstance.post(`/todos`, payload)
 }
 
-export const updateTodo = async (todo: ITodo): Promise<void> => {
-  const payload = { name: todo.name, completed: todo.completed }
-  await axiosInstance.put(`/todos/${todo.id}`, payload)
+export const updateTodoService = async (
+  id: number,
+  name: string,
+  completed: boolean
+): Promise<void> => {
+  const payload = { name, completed }
+  await axiosInstance.put(`/todos/${id}`, payload)
 }
 
-export const removeTodo = async (id: number): Promise<void> => {
+export const removeTodoService = async (id: number): Promise<void> => {
   await axiosInstance.delete(`/todos/${id}`)
 }
