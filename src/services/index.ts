@@ -1,4 +1,4 @@
-import { ITodo } from 'redux/types'
+import { ITodo } from 'redux/types/TodoTypes'
 import axiosInstance from './apiConfig'
 
 export const getTodoService = async (id: number): Promise<ITodo> => {

@@ -1,3 +1,5 @@
-import Task from 'components/molecules/Task'
+import Todo from 'components/molecules/Todo'
+import LabelValue from 'components/molecules/LabelValue'
+import ModalCard from 'components/molecules/ModalCard'
 
-export default Task
+export { Todo, LabelValue, ModalCard }

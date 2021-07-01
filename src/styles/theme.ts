@@ -15,10 +15,11 @@ export const fontFamily = {
 }
 
 export const themeColors = {
-  red: '#FF0000',
-  black: '000',
-  white: '#FFF',
-  gray1: '#d3dae2',
+  gray1: '#f8f9fa',
+  gray2: '#e9ecef',
+  gray3: '#dee2e6',
+  black: '#000',
+  white: '#fff',
 }
 
 export const gridConfig = {

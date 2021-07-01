@@ -1,4 +1,3 @@
-import { FunctionComponent } from 'react'
 import { themeColors } from 'styles/theme'
 
 import TextStyle from './styles'
@@ -10,7 +9,7 @@ export interface IProps {
   truncate?: boolean
 }
 
-const Text: FunctionComponent<IProps> = ({
+const Text: React.FC<IProps> = ({
   color = 'black',
   textTransform = 'none',
   textAlign = 'unset',

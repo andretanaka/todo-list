@@ -2,8 +2,6 @@ import { Types, TodoStateType, TodoActionTypes } from 'redux/types/TodoTypes'
 
 const INITIAL_STATE: TodoStateType = {
   todos: [],
-  isLoading: false,
-  hasError: false,
 }
 
 const getTodosReducer = (
@@ -15,19 +13,6 @@ const getTodosReducer = (
       return {
         ...state,
         todos: action.payload,
-      }
-    case Types.SET_LOADING:
-      return {
-        ...state,
-        isLoading: true,
-        hasError: false,
-      }
-    case Types.SET_ERROR:
-      return {
-        ...state,
-        todos: action.payload,
-        isLoading: false,
-        hasError: true,
       }
     default:
       return state

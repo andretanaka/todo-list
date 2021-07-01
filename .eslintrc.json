@@ -41,7 +41,9 @@
     ],
     "prettier/prettier": "error",
     "camelcase": "off",
-    "react/prop-types": 0
+    "react/prop-types": 0,
+    "import/prefer-default-export": 0,
+    "react/destructuring-assignment": [0]
   },
   "settings": {
     "import/resolver": {

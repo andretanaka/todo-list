@@ -1,26 +1,13 @@
-import { Types } from 'redux/types/TodoTypes'
-import { Todo } from 'redux/interfaces/Todo'
+import { ITodo, Types } from 'redux/types/TodoTypes'
 
 export const GetTodosListAction = (
-  todos: Todo[]
+  todos: ITodo[]
 ): {
   type: keyof typeof Types
-  payload: Todo[]
+  payload: ITodo[]
 } => {
   return {
     type: 'GET_TODOS_LIST',
     payload: todos,
-  }
-}
-
-export const SetIsLoading = (): { type: keyof typeof Types } => {
-  return {
-    type: 'SET_LOADING',
-  }
-}
-
-export const SetHasError = (): { type: keyof typeof Types } => {
-  return {
-    type: 'SET_ERROR',
   }
 }
